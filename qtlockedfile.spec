@@ -64,8 +64,6 @@ touch .licenseAccepted
 %make
 
 %install
-rm -rf %{buildroot}
-
 # libraries
 mkdir -p %{buildroot}%{qt4lib}
 cp -a lib/* %{buildroot}%{qt4lib}
@@ -80,9 +78,6 @@ cp -a \
 mkdir -p %{buildroot}%{qt4dir}/mkspecs/features
 cp -a %{SOURCE1} %{buildroot}%{qt4dir}/mkspecs/features/
 
-%clean
-rm -rf %{buildroot}
-
 %files -n %libname
 %defattr(-,root,root,-)
 %{qt4lib}/lib*.so.%{major}*
@@ -92,7 +87,13 @@ rm -rf %{buildroot}
 %doc LGPL_EXCEPTION.txt LICENSE.* README.TXT
 %doc doc example
 %{qt4lib}/lib*.so
-%dir %{qt4include}/QtSolutions/
-%{qt4include}/QtSolutions/
+%{qt4include}/QtSolutions
 %{qt4dir}/mkspecs/features/%{name}.prf
+
+
+
+%changelog
+* Tue Nov 22 2011 Alexander Khrukin <akhrukin@mandriva.org> 2.4.1-2
++ Revision: 732376
+- imported package qtlockedfile
 
