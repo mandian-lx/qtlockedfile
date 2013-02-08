@@ -8,7 +8,7 @@
 Summary:	QFile extension with advisory locking functions
 Name:		qtlockedfile
 Version:	%{version}
-Release:	%mkrel 2
+Release:	3
 Group:		Development/KDE and Qt
 License:	GPLv3 or LGPLv2 with exceptions
 URL:		http://qt.nokia.com/products/appdev/add-on-products/catalog/4/Utilities/qtlockedfile
@@ -21,7 +21,8 @@ Patch1:		qtlockedfile-dont-link-qtgui.patch
 BuildRequires:	qt4-devel
 
 %description
-This class extends the QFile class with inter-process file locking capabilities.
+This class extends the QFile class with inter-process file locking
+capabilities.
 If an application requires that several processes should access the same file,
 QtLockedFile can be used to easily ensure that only one process at a time is
 writing to the file, and that no process is writing to it while others are
@@ -33,7 +34,8 @@ Group:		Development/KDE and Qt
 Requires:	qt4-common
 
 %description	-n %libname
-This class extends the QFile class with inter-process file locking capabilities.
+This class extends the QFile class with inter-process file locking
+capabilities.
 If an application requires that several processes should access the same file,
 QtLockedFile can be used to easily ensure that only one process at a time is
 writing to the file, and that no process is writing to it while others are
