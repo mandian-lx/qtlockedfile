@@ -2,7 +2,7 @@
 %define version %(echo %{upstream_version} | sed 's,_,.,')
 
 %define major		1
-%define libname		%mklibname %name %major
+%define libname		%mklibname %name %version
 %define develname	%mklibname %name -d
 
 Summary:	QFile extension with advisory locking functions
