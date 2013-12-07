@@ -8,7 +8,7 @@
 Summary:	QFile extension with advisory locking functions
 Name:		qtlockedfile
 Version:	%{version}
-Release:	5
+Release:	6
 Group:		Development/KDE and Qt
 License:	GPLv3 or LGPLv2 with exceptions
 URL:		http://qt.nokia.com/products/appdev/add-on-products/catalog/4/Utilities/qtlockedfile
