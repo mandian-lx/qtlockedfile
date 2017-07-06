@@ -31,7 +31,6 @@ reading it.
 %package	-n %{libname}
 Summary:	QFile extension with advisory locking functions
 Group:		Development/KDE and Qt
-Requires:	qt5-common
 
 %description	-n %{libname}
 This class extends the QFile class with inter-process file locking
