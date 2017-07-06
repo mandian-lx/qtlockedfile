@@ -80,12 +80,12 @@ mkdir -p %{buildroot}%{qt5dir}/mkspecs/features
 cp -a %{SOURCE1} %{buildroot}%{qt5dir}/mkspecs/features/
 
 %files -n %{libname}
-%{qt5_libdir}/lib*.so.%{major}*
+%{_qt5_libdir}/lib*.so.%{major}*
 
 %files -n %{devname}
 %doc LGPL_EXCEPTION.txt LICENSE.* README.TXT
 %doc doc example
-%{qt5_libdir}/lib*.so
-%{qt5_includedir}/QtSolutions
-%{qt5_libdir}/mkspecs/features/%{name}.prf
+%{_qt5_libdir}/lib*.so
+%{_qt5_includedir}/QtSolutions
+%{_qt5_libdir}/mkspecs/features/%{name}.prf
 
