@@ -18,7 +18,7 @@ Source1:	qtlockedfile.prf
 Patch0:		qtlockedfile-dont-build-example.patch
 # (Fedora) Remove unnecessary linkage to libQtGui
 Patch1:		qtlockedfile-dont-link-qtgui.patch
-BuildRequires:	qt4-devel
+BuildRequires:	qt5-devel
 
 %description
 This class extends the QFile class with inter-process file locking
@@ -31,7 +31,7 @@ reading it.
 %package	-n %{libname}
 Summary:	QFile extension with advisory locking functions
 Group:		Development/KDE and Qt
-Requires:	qt4-common
+Requires:	qt5-common
 
 %description	-n %{libname}
 This class extends the QFile class with inter-process file locking
@@ -61,31 +61,31 @@ that use QtLockedFile.
 touch .licenseAccepted
 # Does not use GNU configure
 ./configure -library
-%qmake_qt4
+%qmake_qt5
 %make
 
 %install
 # libraries
-mkdir -p %{buildroot}%{qt4lib}
-cp -a lib/* %{buildroot}%{qt4lib}
+mkdir -p %{buildroot}%{qt5lib}
+cp -a lib/* %{buildroot}%{qt5lib}
 
 # headers
-mkdir -p %{buildroot}%{qt4include}/QtSolutions
+mkdir -p %{buildroot}%{qt5include}/QtSolutions
 cp -a \
     src/qtlockedfile.h \
     src/QtLockedFile \
-    %{buildroot}%{qt4include}/QtSolutions
+    %{buildroot}%{qt5include}/QtSolutions
 
-mkdir -p %{buildroot}%{qt4dir}/mkspecs/features
-cp -a %{SOURCE1} %{buildroot}%{qt4dir}/mkspecs/features/
+mkdir -p %{buildroot}%{qt5dir}/mkspecs/features
+cp -a %{SOURCE1} %{buildroot}%{qt5dir}/mkspecs/features/
 
 %files -n %{libname}
-%{qt4lib}/lib*.so.%{major}*
+%{qt5lib}/lib*.so.%{major}*
 
 %files -n %{devname}
 %doc LGPL_EXCEPTION.txt LICENSE.* README.TXT
 %doc doc example
-%{qt4lib}/lib*.so
-%{qt4include}/QtSolutions
-%{qt4dir}/mkspecs/features/%{name}.prf
+%{qt5lib}/lib*.so
+%{qt5include}/QtSolutions
+%{qt5dir}/mkspecs/features/%{name}.prf
 
