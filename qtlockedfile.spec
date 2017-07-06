@@ -66,18 +66,18 @@ touch .licenseAccepted
 
 %install
 # libraries
-mkdir -p %{buildroot}%{qt5lib}
-cp -a lib/* %{buildroot}%{qt5lib}
+mkdir -p %{buildroot}%{_qt5_libdir}
+cp -a lib/* %{buildroot}%{_qt5_libdir}
 
 # headers
-mkdir -p %{buildroot}%{qt5include}/QtSolutions
+mkdir -p %{buildroot}%{_qt5_includedir}/QtSolutions
 cp -a \
     src/qtlockedfile.h \
     src/QtLockedFile \
-    %{buildroot}%{qt5include}/QtSolutions
+    %{buildroot}%{_qt5_includedir}/QtSolutions
 
-mkdir -p %{buildroot}%{qt5dir}/mkspecs/features
-cp -a %{SOURCE1} %{buildroot}%{qt5dir}/mkspecs/features/
+mkdir -p %{buildroot}%{_qt5_libdir}/mkspecs/features
+cp -a %{SOURCE1} %{buildroot}%{_qt5_libdir}/mkspecs/features/
 
 %files -n %{libname}
 %{_qt5_libdir}/lib*.so.%{major}*
