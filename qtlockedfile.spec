@@ -76,8 +76,8 @@ cp -a \
     src/QtLockedFile \
     %{buildroot}%{_qt5_includedir}/QtSolutions
 
-mkdir -p %{buildroot}%{_qt5_libdir}/mkspecs/features
-cp -a %{SOURCE1} %{buildroot}%{_qt5_libdir}/mkspecs/features/
+mkdir -p %{buildroot}%{_qt5_libdir}/qt5/mkspecs/features
+cp -a %{SOURCE1} %{buildroot}%{_qt5_libdir}/qt5/mkspecs/features/
 
 %files -n %{libname}
 %{_qt5_libdir}/lib*.so.%{major}*
@@ -87,5 +87,5 @@ cp -a %{SOURCE1} %{buildroot}%{_qt5_libdir}/mkspecs/features/
 %doc doc example
 %{_qt5_libdir}/lib*.so
 %{_qt5_includedir}/QtSolutions
-%{_qt5_libdir}/mkspecs/features/%{name}.prf
+%{_qt5_libdir}/qt5/mkspecs/features/%{name}.prf
 
