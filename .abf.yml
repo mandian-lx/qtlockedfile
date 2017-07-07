@@ -1,2 +1,4 @@
+removed_sources:
+  qtlockedfile-2.4_1-opensource.tar.gz: 56f91d2b085fb3d711417bea98253fd80d4628ce
 sources:
-  "qtlockedfile-2.4_1-opensource.tar.gz": 56f91d2b085fb3d711417bea98253fd80d4628ce
+  qt-solutions-1fca9c330d8548d84fccb66407fbaf3aae122d17.tar.gz: 6ae8c95d78bbeded183901e8b737c5f4ba9a9652
