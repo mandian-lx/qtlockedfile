@@ -77,8 +77,8 @@ that use QtLockedFile.
 %apply_patches
 
 # fix incoherent-version-in-name
-sed -i -e 's|-head$|-%{version}|g' common.pri
-sed -i -e 's|-head$|-%{version}|g' %{SOURCE1}
+sed -i -e 's|-head|-%{version}|g' common.pri
+sed -i -e 's|-head|-%{version$}|g' %{SOURCE1}
 
 %build
 # Accept license
